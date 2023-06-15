@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<htmldi lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+      body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1{
+        background-color: blueviolet;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font-size: 24px;
+    }
+    
+    .container{
+        margin: 20px auto;
+        max-width: 400px
+    }
+    input[type="number"]{
+        width: 100px;
+        font-size: 10px;
+        padding: 8px;
+        margin-bottom: 10px;
+
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+    }
+
+    
+    .result {
+      background-color: #eee;
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    button:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+
+
+</style>
+<body>
+    <div class="container">
+    <h1> Calculator App</h1>
+    <input type="number" id="n1" placeholder="Enter First Number">
+    <input type="number" id="n2" placeholder="Enter Second Number">
+    <button onclick="add()">Addition</button> 
+    <button onclick="sub()">Substraction</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Div</button>
+    <div class="result" id="result"></div>
+    </div>
+
+    <script>
+    function add(){
+        var num1 = parseFloat(document.getElementById("n1").value);
+        var num2 = parseFloat(document.getElementById("n2").value);
+        var res =  num1+num2;
+        document.getElementById("result").textContent = "Result :"+res;
+    }
+    function sub(){
+        var num1 = parseFloat(document.getElementById("n1").value);
+        var num2 = parseFloat(document.getElementById("n2").value);
+        var res = num1-num2;
+        document.getElementById("result").textContent = "Result :"+res;
+    }
+    function mul(){
+        var num1 = parseFloat(document.getElementById("n1").value);
+        var num2 = parseFloat(document.getElementById("n2").value);
+        var res = num1 * num2;
+        document.getElementById("result").textContent = "Result :"+res;
+
+    }
+    function div(){
+        var num1 = parseFloat(document.getElementById("n1").value);
+        var num2 = parseFloat(document.getElementById("n2").value);
+        var res = num1 / num2;
+        document.getElementById("result").textContent = "Result :"+res;
+    }
+    
+    </script>
+    
+</body>
+</html>
